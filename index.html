@@ -48,7 +48,7 @@
       </div>
       <div class="produit">
         <img src="./public/image/a933b54b-d97f-4f4e-9ee4-31d1cef070d9 (1).jpeg" alt="Tiramisu maison" />
-        <h3>Tiramisu maison</h3>
+        <h3>      <option value="entremet">Gâteau aux chocolats</option></h3>
         <p>À partir de 50€</p>
       </div>
       <div class="produit">
@@ -90,15 +90,35 @@ Pour toute demande spécifique ou pour discuter de votre projet sucré, n’hés
     <h2>Prestations de Mariage</h2>
     <p>Mes réalisons des gâteaux de mariage personnalisés à partir de 250 € selon le nombre d'étages, les fleurs, les saveurs et les décorations. Chaque gâteau est une œuvre florale et gourmande.</p>
   <img src="./public/image/1ced4f8b-6954-406e-8d9c-268180c52998.jpeg" alt="Gâteau de mariage orchidée rose" class="image-mariage" />
-
   </section>
-
-  <section id="contact" class="section">
+ <section id="contact" class="section contact-grid">
+  <div class="contact-info">
     <h2>Contact</h2>
     <p>Bruxelles, Belgique<br>
-       +32472985832<br>
+       +32 472 98 58 32<br>
        letellier.ama@gmail.com</p>
-  </section>
+    <img src="./public/image/1ced4f8b-6954-406e-8d9c-268180c52998.jpeg"
+         alt="gâteau" class="flower">
+  </div>
+  <form class="contact-form">
+    <h2>Commande Gourmande</h2>
+    <input type="text" placeholder="Nom complet" required>
+    <input type="email" placeholder="Adresse email" required>
+    <select required>
+      <option value="">Choisir une gourmandise</option>
+      <option value="macaron">Bavarois fruits rouges</option>
+      <option value="tarte">Tarte aux fruits</option>
+      <option value="chocolat">Gâteau aux chocolats</option>
+      <option value="palmiers">Palmiers</option>
+      <option value="galette">Galette des rois</option>
+      <option value="mariage">Gâteau de mariage</option>
+      <option value="evenements">Gâteau pour évènements</option>
+    </select>
+    <textarea placeholder="Préférences, allergies, ou petit mot doux..." rows="3"></textarea>
+    <button type="submit">Envoyer la commande</button>
+  </form>
+</section>
+
   <footer>
     <p>&copy; 2025 Rose de Sucre— Créations sucrées avec amour @Amandine Lydia letellier</p>
   </footer>
