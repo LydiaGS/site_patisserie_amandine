@@ -37,6 +37,7 @@ nav ul.nav-menu {
   gap: 2rem;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
 }
 
 nav ul.nav-menu li a {
@@ -59,6 +60,11 @@ nav ul.nav-menu li a {
   padding-right: 2rem;
 }
 
+.accueil-photo {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
 .accueil-photo img.photo-profil {
   width: 220px;
   height: 220px;
@@ -68,7 +74,7 @@ nav ul.nav-menu li a {
 }
 
 .section {
-  padding: 3rem;
+  padding: 3rem 1.5rem;
   max-width: 1000px;
   margin: auto;
 }
@@ -83,6 +89,7 @@ nav ul.nav-menu li a {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .produit {
@@ -100,16 +107,16 @@ nav ul.nav-menu li a {
   border-radius: 8px;
   margin-bottom: 0.5rem;
 }
+
 img.image-mariage {
-  width: 300px;             /* Réduction de la largeur */
-  max-width: 100%;          /* Adaptation pour mobile */
-  height: auto;             /* Maintien du ratio */
-  border-radius: 12px;      /* Coins arrondis doux */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ombre légère */
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin: 2rem auto;
   display: block;
 }
-
 
 footer {
   text-align: center;
@@ -119,3 +126,34 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid var(--card-border);
 }
+
+/* 🔍 Responsive design */
+@media screen and (max-width: 768px) {
+  .accueil {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .accueil-texte {
+    padding-right: 0;
+  }
+
+  .titre_nav {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .produit {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  nav ul.nav-menu {
+    gap: 1rem;
+  }
+}
+
