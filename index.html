@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <header>
+<header>
   <h1 class="titre_nav">Rose de Sucre</h1>
   <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
   <nav>
@@ -21,19 +21,17 @@
     </ul>
   </nav>
 </header>
-
-
-  <section id="accueil" class="accueil">
-    <div class="accueil-texte">
-      <h2>Des douceurs qui parlent au cœur</h2>
-      <p>Bienvenue chez Rose de Sucre, votre pâtisserie artisanale inspirée par la tendresse et la gourmandise. Chaque création est une pâtisserie sucrée qui célèbre les moments précieux.</p>
-    </div>
-    <div class="accueil-photo">
-<video width="560" height="315" controls>
-  <source src="./public/image/2d41e804-4576-4dc9-8230-b5cf6738384d.mp4" type="video/mp4" />
-</video>
-    </div>
-  </section>
+<section id="accueil" class="accueil">
+  <div class="accueil-texte">
+    <h2>Des douceurs qui parlent au cœur</h2>
+    <p>Bienvenue chez Rose de Sucre, votre pâtisserie artisanale inspirée par la tendresse et la gourmandise. Chaque création est une pâtisserie sucrée qui célèbre les moments précieux.</p>
+  </div>
+  <div class="accueil-photo">
+    <video controls>
+      <source src="./public/image/2d41e804-4576-4dc9-8230-b5cf6738384d.mp4" type="video/mp4" />
+    </video>
+  </div>
+</section>
 
   <section id="entreprise" class="section">
     <h2>À propos de nous</h2>
@@ -104,16 +102,29 @@ Pour toute demande spécifique ou pour discuter de votre projet sucré, n’hés
   <footer>
     <p>&copy; 2025 Rose de Sucre— Créations sucrées avec amour @Amandine Lydia letellier</p>
   </footer>
-  <script>
-    <script>
-  const toggleBtn = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector(".nav-menu");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
 
-  toggleBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener("click", () => {
+        // Alterne la classe 'active'
+        navMenu.classList.toggle("active");
+
+        // Alterne l’icône ☰ ↔ ✖
+        if (navMenu.classList.contains("active")) {
+          toggleBtn.textContent = "✖";
+        } else {
+          toggleBtn.textContent = "☰";
+        }
+      });
+    } else {
+      console.error("Bouton ou menu non trouvé.");
+    }
   });
 </script>
 
-  </script>
+
 </body>
 </html>

@@ -16,40 +16,100 @@ body {
   line-height: 1.8;
 }
 
+header {
+  background-color: var(--highlight);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.titre_nav {
+  font-size: 2.8rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/*nav ul.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}*/
+
+nav ul.nav-menu li a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
 .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
-  color: var(--accent);
+  color: #e91e63;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
   cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: var(--highlight);
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 0;
-    right: 0;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    z-index: 999;
+    width: 100%;
+    background-color: #fff0f5;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
   .nav-menu.active {
     display: flex;
   }
+}
+.nav-menu {
+  display: none;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.nav-menu.active {
+  display: flex; /* ou block selon ton style */
+}
+
+.accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.accueil-texte {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.accueil-photo {
+  width: 100%;
+  max-width: 800px;
+}
+
+.accueil video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .accueil {
@@ -77,6 +137,43 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.accueil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
+}
+
+.accueil-texte {
+  flex: 1 1 300px;
+}
+
+.accueil-photo {
+  flex: 1 1 300px;
+}
+
+.accueil video {
+  width: 100%;
+  height: auto;
+  max-width: 560px;
+  border-radius: 8px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .accueil {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .accueil-texte,
+  .accueil-photo {
+    width: 100%;
+  }
 }
 
 .section {
