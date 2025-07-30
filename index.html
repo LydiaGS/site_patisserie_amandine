@@ -9,17 +9,19 @@
 <body>
 
   <header>
-    <h1 class="titre_nav">Rose de Sucre</h1>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#entreprise">À propos</a></li>
-        <li><a href="#patisseries">Nos pâtisseries</a></li>
-        <li><a href="#mariage">Gâteaux de mariage</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1 class="titre_nav">Rose de Sucre</h1>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#entreprise">À propos</a></li>
+      <li><a href="#patisseries">Nos pâtisseries</a></li>
+      <li><a href="#mariage">Gâteaux de mariage</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <section id="accueil" class="accueil">
     <div class="accueil-texte">
@@ -102,5 +104,16 @@ Pour toute demande spécifique ou pour discuter de votre projet sucré, n’hés
   <footer>
     <p>&copy; 2025 Rose de Sucre— Créations sucrées avec amour @Amandine Lydia letellier</p>
   </footer>
+  <script>
+    <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+
+  </script>
 </body>
 </html>

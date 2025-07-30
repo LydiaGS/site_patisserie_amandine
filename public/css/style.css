@@ -16,34 +16,40 @@ body {
   line-height: 1.8;
 }
 
-header {
-  background-color: var(--highlight);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 1px solid var(--card-border);
-}
-
-.titre_nav {
-  font-size: 2.8rem;
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
   color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
 }
 
-nav ul.nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--highlight);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    z-index: 999;
+  }
 
-nav ul.nav-menu li a {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 600;
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 .accueil {
